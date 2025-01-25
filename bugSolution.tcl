@@ -1,0 +1,1 @@
+proc safeProc {x} {if {$x == 0} {return 1} {try {return [expr {$x / 0}]} {errorInfo e} {puts stderr "Error: $e"; return -1}}}
